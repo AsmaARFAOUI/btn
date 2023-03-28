@@ -1,0 +1,38 @@
+.global {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #325454;
+}
+.btn {
+  padding: 20px 40px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #78563d, #985647, #234516);
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+  color: white;
+}
+.btn::before {
+  content: " ";
+  top: -25%;
+  left: -30px;
+  width: 20px;
+  height: 200%;
+  background-color: white;
+  position: absolute;
+  transition: 0.5s;
+  transform: rotate(-45deg);
+}
+.btn:hover::before {
+  left: calc(100% + 40px);
+}
